@@ -1,0 +1,46 @@
+<div class="container">
+      
+  
+  <div class= "row">
+    <div class = "col-12 col-sm-6"><br/>
+    
+    <h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Electronics:</h1>
+    
+  </div>
+  <div class="col-12 col-sm-6 align-self-left">
+
+  <form class="example" action="action_page.php">
+    <input type="text" placeholder="Search for any product..." name="search">
+    
+  </form></div>
+
+</div><br/>
+
+<div class="row text-center" >
+  <div class="col-lg-3 col-md-6 mb-4" *ngFor="let item of items | async">
+    <div class="card">
+      <img class="card-img-top shop-item-image" src={{item.photo}} alt="">
+      <div class="card-body shop-items">
+          <div class="shop-item">
+              
+              
+        <h4 class="card-title shop-item-title">{{item.title}}</h4>
+        <p class="card-text">{{item.description}}</p>
+      </div></div>
+      <div class="card-footer">
+        
+          <span class="shop-item-price">{{item.price}} LBP</span>
+          
+          <a href = "../cart"><button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button></a>
+          
+      </div>
+     
+    </div>
+  </div>
+          
+<!-- /.row -->
+
+</div>
+</div>
+
+
